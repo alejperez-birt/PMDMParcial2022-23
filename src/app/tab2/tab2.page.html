@@ -1,0 +1,24 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      LISTADO DE PRODUCTOS
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true"> 
+  <ion-list *ngFor="let producto of gestionLista.getLista()">
+    <!-- <app-mostrar-producto titulo=producto.titulo foto=producto.foto valoracion=producto.valoracion></app-mostrar-producto> -->
+    <ion-item>
+      <ion-thumbnail slot="start" class="ion-margin">
+        <img alt="{{ producto.titulo }}" src="{{ producto.foto }}" />
+      </ion-thumbnail>
+      <ion-label>
+        {{ producto.titulo }}<br>
+        <ion-badge *ngIf="producto.valoracion>=4" color="success" slot="start">{{ producto.valoracion }}</ion-badge>
+        <ion-badge *ngIf="producto.valoracion<4" color="secondary" slot="start">{{ producto.valoracion }}</ion-badge>
+      </ion-label>      
+    </ion-item>
+  </ion-list>
+
+</ion-content>

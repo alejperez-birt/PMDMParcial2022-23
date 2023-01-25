@@ -1,0 +1,8 @@
+<ion-thumbnail slot="start" class="ion-margin">
+  <img alt={{ titulo }} src="{{ foto }}" />
+</ion-thumbnail>
+<ion-label>
+  {{ titulo }}<br>
+  <ion-badge *ngIf="valoracion>=4" color="success" slot="start">{{ valoracion }}</ion-badge>
+  <ion-badge *ngIf="valoracion<4" color="secondary" slot="start">{{ valoracion }}</ion-badge>
+</ion-label> 

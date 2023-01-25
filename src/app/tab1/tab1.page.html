@@ -1,0 +1,29 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      TIENDA
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <!-- Visualizar datos de datosProducto -->
+  <ion-card>
+    <ion-img src= "{{ datosProducto.foto }}" class="imagen"> </ion-img>
+    <ion-card-header>
+      <ion-card-title>{{ datosProducto.titulo }}</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+    </ion-card-content>
+  </ion-card>
+
+  <!-- Añadir producto al array del servicio -->
+  <ion-button expand="block" fill="clear" shape="round" (click)="anadirProducto()">
+    AÑADIR
+  </ion-button>
+
+  <!-- Generar producto aleatorio -->
+  <ion-button expand="block" fill="clear" shape="round" (click)="consultaRest()">
+    NUEVO
+  </ion-button>
+</ion-content>
